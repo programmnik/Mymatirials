@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Математический анализ</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <!-- Шапка страницы -->
+    <div class="header">
+        <button class="back-button" onclick="location.href='D:/никита/сайт_первый_семестр/main/index.html'">Назад</button>
+        <div class="subject-title">Математический анализ</div>
+        <div class="date-time">
+            <span id="current-date"></span>
+            <span id="current-time"></span>
+        </div>
+    </div>
+    <script>
+        // Обновляем дату и время каждую секунду
+        function updateDateTime() {
+            const now = new Date();
+            document.getElementById('current-date').textContent = now.toLocaleDateString('ru-RU');
+            document.getElementById('current-time').textContent = now.toLocaleTimeString('ru-RU');
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+</body>
+</html>
